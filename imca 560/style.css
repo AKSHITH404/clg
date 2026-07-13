@@ -1,0 +1,46 @@
+body{
+	background-color :#FFD700;
+}
+.maindiv{
+
+	display	: flex;
+	background-color :#FFD700;
+
+}	
+.div1{
+	text-align : center;
+	padding-top : 75px; 
+	padding : 50px;
+
+	
+}
+.div2{
+	text-align : center;
+	padding-top : 75px; 
+		padding : 50px;
+}
+.div3{
+	text-align : center;
+	padding-top : 75px; 
+		padding : 50px;
+}
+.div1:hover{
+	background-color:black;
+}
+.div2:hover{
+	background-color:white;
+}
+.div3:hover{
+	background-color:gray;
+}
+#car1{
+	width : 800px;
+	height : auto;
+
+}
+#car2{
+	width : 800px;
+	height : auto;
+	
+	
+}

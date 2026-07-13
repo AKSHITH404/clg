@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+</head>
+<body>
+
+<h2 align="center">Student Registration Form</h2>
+
+<form>
+    <table border="1" cellpadding="8" cellspacing="0" align="center">
+        <tr>
+            <td><label for="name">Student Name</label></td>
+            <td><input type="text" id="name" name="name"></td>
+        </tr>
+
+        <tr>
+            <td><label for="rollno">Roll Number</label></td>
+            <td><input type="text" id="rollno" name="rollno"></td>
+        </tr>
+
+        <tr>
+            <td><label for="course">Course</label></td>
+            <td>
+                <input list="courses" id="course" name="course">
+                <datalist id="courses">
+                    <option value="BCA">
+                    <option value="B.Sc">
+                    <option value="B.Com">
+                    <option value="B.Tech">
+                    <option value="MCA">
+                </datalist>
+            </td>
+        </tr>
+
+        <tr>
+            <td><label for="semester">Semester</label></td>
+            <td>
+                <input list="semesters" id="semester" name="semester">
+                <datalist id="semesters">
+                    <option value="Semester 1">
+                    <option value="Semester 2">
+                    <option value="Semester 3">
+                    <option value="Semester 4">
+                    <option value="Semester 5">
+                    <option value="Semester 6">
+                </datalist>
+            </td>
+        </tr>
+
+        <tr>
+            <td><label for="contact">Contact Number</label></td>
+            <td><input type="tel" id="contact" name="contact"></td>
+        </tr>
+
+        <tr>
+            <td><label for="email">Email</label></td>
+            <td><input type="email" id="email" name="email"></td>
+        </tr>
+
+		<tr >
+            
+            <td colspan="2"  >
+				<input type="checkbox" id="agree" name="agree">
+				<label align = "center" for="agree">I confirm that the above information is correct.</label>
+			</td>
+        </tr>
+
+
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="Register">
+                <input type="reset" value="Reset">
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
