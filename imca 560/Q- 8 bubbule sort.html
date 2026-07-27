@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Bubble Sort</title>
+    <script>
+        function bubSort() {
+            let str = document.getElementById("arrIn").value;
+            let nums = str.split(",");
+
+            for (let i = 0; i < nums.length; i++) {
+                nums[i] = parseInt(nums[i]);
+            }
+
+            let temp;
+
+            for (let i = 0; i < nums.length; i++) {
+                for (let j = 0; j < nums.length; j++) {
+                    if (nums[i] >= nums[j]) {
+                        temp = nums[j];
+                        nums[j] = nums[i];
+                        nums[i] = temp;
+                    }
+                }
+            }
+
+            let result = "Sorted Array is : ";
+
+            for (let i = nums.length - 1; i >= 0; i--) {
+                result += nums[i] + " ";
+            }
+
+            document.getElementById("sortedText").innerHTML = result;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Bubble Sort</h2>
+
+    <label>Enter Array :</label><br>
+    <input type="text" id="arrIn" placeholder="10,5,2,8"><br><br>
+
+    <input type="button" value="Sort" onclick="bubSort()"><br><br>
+
+    <h3 id="sortedText"></h3>
+
+</body>
+</html>

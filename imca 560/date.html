@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>date check</title>
+	</head>
+	<body>
+		<button id = "b1" onclick ="current_time()">curent time</button>
+		<p id= "out1" > CURRENT TIME :</p>
+		<button id = "b2" onclick ="format()">format Date</button>
+		<p id= "out2" > DATE format :
+			<br></br>
+				<p id= "o1" >        </p>
+				<p id= "o2" >        </p>
+		</p>
+		<br><br>
+		<button id = "b3" onclick ="diff()">time differance</button>
+		<input id ="input1" type = "date" value = "enter date">	
+		<p id= "out3" > time :
+		<script>
+		function current_time(){
+				let d2 = new Date();
+				let hours=d2.getHours();
+				let min=d2.getMinutes();
+				let time = hours+"-"+min;
+				console.log(time);
+				let o1=
+				document.getElementById("out1").innerHTML=time;
+			}
+			function format(){
+				let d3 = new Date();
+				console.log(d3);
+				document.getElementById("o1").innerHTML=d3.toString();
+				document.getElementById("o2").innerHTML=d3.toUTCString();
+			}
+			function diff(){
+				let d1 = document.getElementById("input1").valueAsDate;
+				console.log(d1);
+				let t1=d1.getTime();
+				console.log(t1);
+				let curdate=new Date();
+				let t2=curdate.getTime();
+				console.log(t2);
+				let  difff = t2-t1;
+				console.log(difff);
+				h1=parseInt(difff/3600000);
+				h1=Math.floor(h1/24);
+				document.getElementById("out3").innerHTML=(h1+"days");
+			}
+		</script>
+	</body>
+</html>

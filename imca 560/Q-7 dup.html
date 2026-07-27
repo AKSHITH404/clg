@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>dup</title>
+	</head>
+	<body>
+		<input type ="text" id ="num" name = "num" value = "enter array">
+		<button id = "b1" onclick ="dup()">dup check</button>
+		<p id= "resText" > ,,</p>
+		<br><br>
+		<script>
+			function dup()
+			{
+				let str = document.getElementById("num").value;
+				let arr = str.split(" ");
+				let dup = false;
+				let nodupe = [];
+				let arrInd = 0;
+				let resArr = [];
+				for(let i = 0; i < arr.length; i++)
+				{
+					console.log(arr[i]);
+					for(let j = i+1; j < arr.length; j++)
+					{
+						if(arr[i] == arr[j])
+						{
+							dup = true;
+						}	
+					}
+					if(dup == false)
+					{
+						nodupe[arrInd] = arr[i]
+						arrInd = arrInd+1;
+					}
+					console.log("After Check");
+					for (let j = 0; j<nodupe.length; j++)
+					{
+						console.log(nodupe[j]);
+					}
+					dup = false;
+					console.log("End Iteration");
+				}
+				let resStr = "Array without Duplicate elements is : ";
+				for (let j = 0; j<nodupe.length; j++)
+				{
+					resStr = resStr + " " + nodupe[j];
+				} 
+				document.getElementById("resText").innerHTML = resStr;
+			}
+		</script>
+	</body>
+</html>
+		

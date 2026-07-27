@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<title>palindrom</title>
+	</head>
+	<body>
+		<input type ="text" id ="num" name = "num" value = "enter array">
+		<button id = "b1" onclick ="prime()">Prime check</button>
+		<button id = "b2" onclick ="pal()">palindrom check</button>
+		<br><br>
+		<p id ="primetxt"><p1>
+		<p id ="paltxt"><p1>	
+		
+		<script>
+			function prime(){
+				
+				let num1= document.getElementById("num").value;
+				console.log(num1);
+				let num2 = num1.split(" ");
+				console.log(num2);
+				let str1= "prime numbers";
+				for( let i=0;i<num2.length;i++){
+					let n1=num2[i]
+					let flag=1;
+					for ( let j=2;j<n1;j++){
+						if(n1%j==0){
+							flag=0;
+						}
+					}
+					if(flag == 1){
+						console.log(n1+" is prime");
+						str1= str1+" "+n1;
+					}
+					else{
+						console.log(n1+" is not prime");
+					}
+					
+					document.getElementById("primetxt").innerHTML =str1;
+				}
+			}
+			function pal(){
+				let num1= document.getElementById("num").value;
+				console.log(num1);
+				let num2 = num1.split(" ");
+				console.log(num2);
+				let str2= "palindrom : numbers";
+				for( let i=0;i<num2.length;i++){
+					let rev=0;
+					let n1=num2[i];
+					let n2=n1;
+					while(n1!=0){
+						let x=n1%10;
+						rev=rev*10+x;
+						n1=Math.floor(n1/10);
+					}
+					if(rev==n2){
+						console.log(rev+"is reverse");
+						str2= str2+" "+rev;
+					}
+					
+				}
+				document.getElementById("paltxt").innerHTML =str2;
+			}
+		</script>
+	</body>
+</html>
