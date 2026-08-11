@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE menu[
+	<!ELEMENT menu (category+)>
+	<!ELEMENT category (item+)>
+	<!ATTLIST category	
+		name CDATA #REQUIRED
+	>
+	<!ELEMENT item (name,price,desc)>
+	<!ATTLIST item
+		id ID #REQUIRED
+	>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT price (#PCDATA)>
+	<!ELEMENT desc (#PCDATA)>
+
+]>
+<menu>
+	<category name ="starter">
+		<item id = "1">
+			<name>x</name>
+			<price>100</price>
+			<desc>chaat</desc>
+		</item>
+		<item id = "2">
+			<name>y</name>
+			<price>100</price>
+			<desc>samosa</desc>
+		</item>
+		<item id = "3">
+			<name>y</name>
+			<price>100</price>
+			<desc>samosa</desc>
+		</item>
+	</category>
+	<category name = "main course">
+		<item id = "10">
+			<name>a</name>
+			<price>100</price>
+			<desc>chore</desc>
+		</item>
+		<item id = "20">
+			<name>y</name>
+			<price>500</price>
+			<desc>rice</desc>
+		</item>
+		<item id = "30">
+			<name>z</name>
+			<price>120</price>
+			<desc>manthi</desc>
+		</item>
+	</category>
+	<category name = "drinks">
+		<item id = "7">
+			<name>a</name>
+			<price>100</price>
+			<desc>chore</desc>
+		</item>
+		<item id = "8">
+			<name>y</name>
+			<price>500</price>
+			<desc>rice</desc>
+		</item>
+		<item id = "9">
+			<name>z</name>
+			<price>120</price>
+			<desc>manthi</desc>
+		</item>
+	</category>
+</menu>
